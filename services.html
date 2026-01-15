@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Services | Kaiser</title>
+    <link rel="icon" type="image/png" href="Icon2.png">
+    <link rel="shortcut icon" type="image/png" href="Icon2.png">
+    <link rel="apple-touch-icon" href="Icon2.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="Icon2.png" alt="Kaiser Logo" class="site-icon">
+                <h1 class="logo">Kaiser</h1>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="services">
+        <h1>My Services</h1>
+        <p class="services-intro">
+            I offer a range of web development services to help bring your digital vision to life.
+            From concept to deployment, I'm here to create solutions that work for you.
+        </p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">💻</div>
+                <h3>Website Development</h3>
+                <p>Custom websites built from scratch using modern technologies. Responsive, fast, and user-friendly designs that work across all devices.</p>
+                <ul class="service-features">
+                    <li>Responsive Design</li>
+                    <li>Modern HTML5/CSS3</li>
+                    <li>JavaScript Integration</li>
+                    <li>Cross-browser Compatibility</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>UI/UX Improvement</h3>
+                <p>Transform your existing website with modern design principles. Enhance user experience and visual appeal to keep visitors engaged.</p>
+                <ul class="service-features">
+                    <li>Modern Design Makeover</li>
+                    <li>User Experience Optimization</li>
+                    <li>Performance Enhancement</li>
+                    <li>Mobile Optimization</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚡</div>
+                <h3>Website Optimization</h3>
+                <p>Speed up your website and improve performance. Optimize code, images, and loading times for better user experience and SEO.</p>
+                <ul class="service-features">
+                    <li>Page Speed Optimization</li>
+                    <li>Code Minification</li>
+                    <li>Image Compression</li>
+                    <li>SEO Improvements</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Website Maintenance</h3>
+                <p>Keep your website running smoothly with regular updates, security checks, and content management. Ongoing support when you need it.</p>
+                <ul class="service-features">
+                    <li>Regular Updates</li>
+                    <li>Security Monitoring</li>
+                    <li>Content Updates</li>
+                    <li>Bug Fixes</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Responsive Design</h3>
+                <p>Ensure your website looks perfect on all devices. Mobile-first approach with seamless experience across phones, tablets, and desktops.</p>
+                <ul class="service-features">
+                    <li>Mobile-First Design</li>
+                    <li>Tablet Optimization</li>
+                    <li>Desktop Enhancement</li>
+                    <li>Touch-Friendly Interface</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎓</div>
+                <h3>Student Projects</h3>
+                <p>Specialized in academic and educational projects. Grading systems, student portals, and educational websites tailored for learning environments.</p>
+                <ul class="service-features">
+                    <li>Grading Systems</li>
+                    <li>Student Portals</li>
+                    <li>Educational Websites</li>
+                    <li>Academic Tools</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contact-cta">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let's discuss how I can help bring your ideas to life.</p>
+            <a href="about.html" class="btn">Get In Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <img src="Icon2.png" alt="Kaiser Logo" class="circular-icon" style="margin-bottom: 10px;">
+        <p>© 2026 Kaiser Lagumbay. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>

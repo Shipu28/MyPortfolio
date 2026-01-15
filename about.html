@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Me | Kaiser</title>
+    <link rel="icon" type="image/png" href="Icon2.png">
+    <link rel="shortcut icon" type="image/png" href="Icon2.png">
+    <link rel="apple-touch-icon" href="Icon2.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="Icon2.png" alt="Kaiser Logo" class="site-icon">
+                <h1 class="logo">Kaiser</h1>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about">
+        <h1>About Me</h1>
+        <p>
+            My name is <strong>Kaiser Julio Luis B. Lagumbay</strong>.  
+            I am an IT student and an aspiring website developer.
+        </p>
+        <p>
+            I enjoy learning new technologies, building systems,
+            and improving my skills in web development.
+            My goal is to create useful and visually appealing websites.
+        </p>
+
+        <div class="personal-info">
+            <h2>Personal Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Full Name:</span>
+                    <span class="info-value">Kaiser Julio Luis B. Lagumbay</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Address:</span>
+                    <span class="info-value">Baranggay San Juan P-3, Gingoog City</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Contact:</span>
+                    <span class="info-value">0975 109 0309</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Email:</span>
+                    <span class="info-value">Kaiserplays28@gmail.com</span>
+                </div>
+            </div>
+        </div>
+
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <div class="skill-header">
+                    <span class="skill-icon">🌐</span>
+                    <span>HTML</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar html"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <span class="skill-icon">🎨</span>
+                    <span>CSS</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar css"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <span class="skill-icon">⚡</span>
+                    <span>JavaScript</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar js"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <span class="skill-icon">🐘</span>
+                    <span>PHP</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar php"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <span class="skill-icon">💻</span>
+                    <span>C#</span>
+                </div>
+                <div class="progress">
+                    <div class="progress-bar csharp"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <img src="Icon2.png" alt="Kaiser Logo" class="circular-icon" style="margin-bottom: 10px;">
+        <p>© 2026 Kaiser Lagumbay. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kaiser | Portfolio</title>
+    <link rel="icon" type="image/png" href="Icon2.png">
+    <link rel="shortcut icon" type="image/png" href="Icon2.png">
+    <link rel="apple-touch-icon" href="Icon2.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="Icon2.png" alt="Kaiser Logo" class="site-icon">
+                <h1 class="logo">Kaiser</h1>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="profile-image">
+                <img src="Kaiser.jpg" alt="Kaiser Lagumbay">
+            </div>
+            <h2>Hello, I'm</h2>
+            <h1>Kaiser Julio Luis B. Lagumbay</h1>
+            <p>
+                I am a passionate website developer who enjoys creating clean,
+                responsive, and user-friendly websites. I love turning ideas
+                into real digital experiences.
+            </p>
+            <a href="about.html" class="btn">Learn More About Me</a>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO PREVIEW -->
+    <section class="portfolio-preview">
+        <h2>What’s Inside My Portfolio</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript based websites with clean layouts.</p>
+            </div>
+            <div class="card">
+                <h3>Student Projects</h3>
+                <p>School-based systems and websites.</p>
+            </div>
+            <div class="card">
+                <h3>Creative Design</h3>
+                <p>Simple UI designs focused on usability and clarity.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <img src="Icon2.png" alt="Kaiser Logo" class="circular-icon" style="margin-bottom: 10px;">
+        <p>© 2026 Kaiser Lagumbay. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+
+</body>
+</html>
